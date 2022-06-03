@@ -120,6 +120,7 @@ Admin plan > Acces to a admin panel, where you can see users, and generate beta 
 4. Re-add auto plan on register (free) [X]
 5. Create a complex control panel for admins [ ]
 6. Add settings page to users (change pw, emails etc) [ ]
+7. Add steam settings - Title, Auto responder etc [ ]
 # Roadmap
 ```
 app.js (main app function)
