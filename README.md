@@ -7,6 +7,7 @@ This was made using:
 2. EJS
 3. ExpressJS
 4. HTML + CSS
+5. Xampp (For MySQL database)
 
 To connect to steam api, I used [steam-user](https://github.com/DoctorMcKay/node-steam-user) by [@DoctorMcKay](https://github.com/DoctorMcKay).
 
