@@ -122,7 +122,7 @@ Admin plan > Acces to a admin panel, where you can see users, and generate beta 
 - [ ] Add support page 
 - [ ] Optimize the code (make it lightweight)
 - [ ] Add google login support
-- [X] Re-add auto plan on register (free)
+- [X] ~~Re-add auto plan on register (free)~~
 - [ ] Create a complex control panel for admins
 - [ ] Add settings page to users (change pw, emails etc)
 - [ ] Add steam settings - Title, Auto responder etc
