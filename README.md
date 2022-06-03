@@ -10,7 +10,6 @@ This was made using:
 
 To connect to steam api, I used [steam-user](https://github.com/DoctorMcKay/node-steam-user) by [@DoctorMcKay](https://github.com/DoctorMcKay).
 
-
 ## How to use?
 Download or clone the repository
 
