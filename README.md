@@ -8,8 +8,7 @@ This was made using:
 3. ExpressJS
 4. HTML + CSS
 
-To connect to steam api, I used [steam-user](https://github.com/DoctorMcKay/node-steam-user) by @DoctorMcKay.
-
+To connect to steam api, I used [steam-user](https://github.com/DoctorMcKay/node-steam-user) by [@DoctorMcKay](https://github.com/DoctorMcKay).
 
 
 ## How to use?
@@ -50,6 +49,10 @@ app.js (main app function)
 ```
 
 # Showcase
+You can find an video [here](https://www.youtube.com/watch?v=sDBT-DZDIy4)
+
+
+
 Main Page
 ![Main Page](showcase/1.png)
 
