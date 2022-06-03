@@ -126,6 +126,8 @@ Admin plan > Acces to a admin panel, where you can see users, and generate beta 
 5. Create a complex control panel for admins [ ]
 6. Add settings page to users (change pw, emails etc) [ ]
 7. Add steam settings - Title, Auto responder etc [ ]
+8. Remove beta key register [ ]
+9. Add email confirmation [ ]
 
 Free accounts will be limited to 100 hours to idle, renewable every time when expires.
 # Roadmap
