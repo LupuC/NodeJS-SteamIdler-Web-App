@@ -90,9 +90,9 @@ Security string must be 32 bytes (32 chars)
 
 This encryption is 2 ways, meaning, you can also decrypt the encryption.
 The functions that I made, are 
-- encrypt(text) 
-and 
+- encrypt(text)
 - decrypt(text)
+
 (in index.js)
 
 ### Note
