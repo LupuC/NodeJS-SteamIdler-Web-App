@@ -29,6 +29,20 @@ For database, I used mysql with following tables:
 4. beta_keys - beta keys to register
 5. beta_keys_used - beta keys used by users
 
+
+To create accounts db, use this SQL command:
+```
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+	plan VARCHAR(30) DEFAULT 'free',
+	beta_key VARCHAR(30) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+```
+
 When you register to website, the password will be encrypted, and also the steam accounts will be encrypted too.
 
 ### Note
