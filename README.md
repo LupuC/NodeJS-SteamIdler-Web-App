@@ -119,15 +119,15 @@ Premium plan > access to 2 steam accounts
 Admin plan > Acces to a admin panel, where you can see users, and generate beta keys. For now, the beta keys will be displayed only on console, and to database!
 
 # Updates/ to do
-1. Add support page [ ]
-2. Optimize the code (make it lightweight) [ ]
-3. Add google login support [ ]
-4. Re-add auto plan on register (free) [X]
-5. Create a complex control panel for admins [ ]
-6. Add settings page to users (change pw, emails etc) [ ]
-7. Add steam settings - Title, Auto responder etc [ ]
-8. Remove beta key register [ ]
-9. Add email confirmation [ ]
+- [ ] Add support page 
+- [ ] Optimize the code (make it lightweight)
+- [ ] Add google login support
+- [X] Re-add auto plan on register (free)
+- [ ] Create a complex control panel for admins
+- [ ] Add settings page to users (change pw, emails etc)
+- [ ] Add steam settings - Title, Auto responder etc
+- [ ] Remove beta key register
+- [ ] Add email confirmation
 
 Free accounts will be limited to 100 hours to idle, renewable every time when expires.
 # Roadmap
