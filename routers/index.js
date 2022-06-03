@@ -41,6 +41,7 @@ const connection = mysql.createConnection({
   database: "nodelogin",
 });
 
+//Index Page
 router.get("", (req, res, next) => {
   res.render("index", {
     user: req.session.username,
@@ -107,10 +108,13 @@ router.get("/logout", (req, res) => {
   }
 });
 
+
 //Test Page
 router.get("/test", (req, res) => {
   res.render("test");
 });
+//Test Page
+
 
 //Register Page
 router.get("/join", (req, res) => {
@@ -207,16 +211,22 @@ router.post("/register", function (req, res) {
     res.end();
   }
 });
+
+//Pricing Page
 router.get("/pricing", (req, res) => {
   res.render("pricing", {
     user: req.session.username,
   });
 });
+
+//Features Page
 router.get("/features", (req, res) => {
   res.render("features", {
     user: req.session.username,
   });
 });
+
+//Support Page
 router.get("/support", (req, res) => {
   res.render("support", {
     user: req.session.username,
@@ -392,6 +402,7 @@ router.get("/app", (req, res) => {
   
 });
 
+//Add Steam Account Free
 router.post("/app/account", (req, res) => {
   let steamUsername = req.body.SteamUsername;
   let steamPassword = req.body.SteamPassword;
@@ -413,6 +424,7 @@ router.post("/app/account", (req, res) => {
     res.end();
   }
 });
+//Add Steam Account Premium
 router.post("/app/premium_account", (req, res) => {
   let steamUsername = req.body.SteamUsername;
   let steamPassword = req.body.SteamPassword;
@@ -440,9 +452,12 @@ router.post("/app/premium_account", (req, res) => {
   }
 });
 
+
+//Store running steam accounts
 let accounts = {};
 let title = "MyHourBoost.com - Free idling :)";
 
+//Login to steam account free
 function loginAccountFree(accountName, password, twoFactorCode) {
   if (accounts[accountName]) {
     process.on("uncaughtException", function (Error) {
@@ -476,6 +491,7 @@ function loginAccountFree(accountName, password, twoFactorCode) {
     );
   });
 }
+//Login to steam account premium
 function loginAccountPremium(accountName, password, twoFactorCode) {
   if (accounts[accountName]) {
     process.on("uncaughtException", function (Error) {
@@ -509,6 +525,8 @@ function loginAccountPremium(accountName, password, twoFactorCode) {
     );
   });
 }
+
+//Logout from a steam account
 function logoutAccount(accountName) {
   if (!accounts[accountName]) {
     process.on("uncaughtException", function (Error) {
@@ -525,6 +543,7 @@ function logoutAccount(accountName) {
   console.log(`[!] Logged off succesfully from ${accountName}.`);
 }
 
+//Start steam account idler free
 router.post("/app/start_free", (req, res) => {
   connection.query(
     "SELECT * FROM steam_accounts_free WHERE username = ?",
@@ -642,6 +661,7 @@ router.post("/app/remove_account_free", (req, res) => {
   return res.redirect("back");
 });
 
+//Start steam account idler premium
 router.post("/app/start_premium", (req, res) => {
   connection.query(
     "SELECT * FROM steam_accounts_premium WHERE username = ?",
@@ -759,7 +779,7 @@ router.post("/generate_betakey", (req, res) => {
 
 
 
-
+//Soon
 router.get("/admin-panel", (req, res) => {
   if (!req.session.username) {
     res.redirect("/login");
@@ -793,7 +813,7 @@ router.get("/admin-panel", (req, res) => {
 });
 
 
-
+//404 error for unavailable page
 router.get("/404", (req, res) => {
   res.render("404");
 });
