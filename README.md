@@ -31,11 +31,20 @@ For database, I used mysql with following tables:
 
 When you register to website, the password will be encrypted, and also the steam accounts will be encrypted too.
 
+### Note
+You'll have to manually set the plan type to free/ premium or admin, to see the app page.
+
+Free plan > access to 1 steam account
+Premium plan > access to 2 steam accounts
+Admin plan > Acces to a admin panel, where you can see users, and generate beta keys. For now, the beta keys will be displayed only on console, and to database!
+
 # Updates/ to do
 1. Add support page [ ]
 2. Optimize the code (make it lightweight) [ ]
 3. Add google login support [ ]
-
+4. Re-add auto plan on register [ ]
+5. Create a complex control panel for admins [ ]
+6. Add settings page to users (change pw, emails etc) [ ]
 # Roadmap
 ```
 app.js (main app function)
