@@ -126,7 +126,7 @@ Admin plan > Acces to a admin panel, where you can see users, and generate beta 
 app.js (main app function)
     |
     |- Routers
-         |- index.ejs (pages render & functions)
+         |- index.ejs (pages render & functions - post/ get)
     |
     |- Views
          |- .ejs (html pages)
