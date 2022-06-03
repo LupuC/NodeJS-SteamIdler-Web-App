@@ -2,6 +2,9 @@
 
 MyHourBoost is an application to boost your hours on steam library.
 
+I was planning to run it as a paid service, but now I want to give it for free to anyone who wants to use.
+(Please don't remove the footer where is my name)
+
 This was made using:
 1. NodeJS
 2. EJS
