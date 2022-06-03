@@ -791,9 +791,8 @@ router.get("/admin-panel", (req, res) => {
       function (error, result, fields) {
         planType = result[0].plan;
         if (planType === "admin") {
-
           connection.query(
-            "SELECT count(*) as users FROM accounts WHERE username = ?",
+            "SELECT count(*) as users FROM accounts",
             [req.session.username],
             function (error, result, fields) {
               usersCount = result[0].users;
