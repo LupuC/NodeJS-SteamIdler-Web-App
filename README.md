@@ -76,6 +76,20 @@ CREATE TABLE IF NOT EXISTS beta_keys_used (
 
 When you register to website, the password will be encrypted, and also the steam accounts will be encrypted too.
 
+Website account encryptions was made using [bcrypt](https://www.npmjs.com/package/bcrypt) for hashing password (1 way encrypt) and steam account encryptions was made using [crypto](https://nodejs.org/api/crypto.html), using aes-256-cbc algorithm.
+To change this encryption, change:
+```
+const initVectorString = "1234567890zxcvbn";
+const SecuritykeyString = "1234567890zxcvbn1234567890zxcvbn";
+```
+in routers/index.js file.
+Vector string must be 16 bytes (16 chars)
+Security string must be 32 bytes (32 chars)
+
+This encryption is 2 ways, meaning, you can also decrypt the encryption.
+The functions that I made, are encrypt(text) and decrypt(text)
+(in index.js)
+
 ### Note
 You'll have to manually set the plan type to free/ premium or admin, to see the app page.
 
