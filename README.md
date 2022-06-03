@@ -99,7 +99,9 @@ The functions that I made, are
 You'll have to manually set the plan type to free/ premium or admin, to see the app page.
 
 Free plan > access to 1 steam account
+
 Premium plan > access to 2 steam accounts
+
 Admin plan > Acces to a admin panel, where you can see users, and generate beta keys. For now, the beta keys will be displayed only on console, and to database!
 
 # Updates/ to do
