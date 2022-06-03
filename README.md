@@ -83,11 +83,16 @@ const initVectorString = "1234567890zxcvbn";
 const SecuritykeyString = "1234567890zxcvbn1234567890zxcvbn";
 ```
 in routers/index.js file.
+
 Vector string must be 16 bytes (16 chars)
+
 Security string must be 32 bytes (32 chars)
 
 This encryption is 2 ways, meaning, you can also decrypt the encryption.
-The functions that I made, are encrypt(text) and decrypt(text)
+The functions that I made, are 
+- encrypt(text) 
+and 
+- decrypt(text)
 (in index.js)
 
 ### Note
