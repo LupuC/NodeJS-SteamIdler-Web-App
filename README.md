@@ -49,4 +49,13 @@ app.js (main app function)
 
 ```
 
+# Showcase
+![Main Page](showcase/1.png)
+![Features Page](showcase/2.png)
+![Pricing Page](showcase/3.png)
+![Free user Page](showcase/4.png)
+![Premium user Page](showcase/5.png)
+![Database](showcase/Screenshot_1.png)
+
+
 If you have any question, don't hesitate to contact me at lupucl.com or via email here: contact@lupucl.com
