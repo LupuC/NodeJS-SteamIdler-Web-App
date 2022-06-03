@@ -95,6 +95,15 @@ The functions that I made, are
 
 (in index.js)
 
+# How does it work?
+1. Create account. Based on type, you'll be able to add account(s) (free > 1; premium > 2)
+2. Add steam account; steam account(s) will be added to database, and the password will be encrypted using encrypt function.
+3. Customize settings (soon)
+4. Start the idler; it's decrypting the password in order to connect to steam, and store the running account to a list.
+5. Stop the idler; automatically get's the name of your steam account, and search in the running accounts list. If it's found, it will stop the idling, if it's not found, then nothing will be stopped (since the account is not running)
+
+
+
 ### Note
 You'll have to manually set the plan type to free/ premium or admin, to see the app page.
 
