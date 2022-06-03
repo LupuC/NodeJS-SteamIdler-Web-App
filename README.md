@@ -43,6 +43,37 @@ CREATE TABLE IF NOT EXISTS accounts (
 )
 ```
 
+To create steam accounts db, use this SQL command:
+(Edit steam_accounts_free with steam_accounts_premium to add the 2nd account for premium accounts)
+```
+CREATE TABLE IF NOT EXISTS steam_accounts_free (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    steam_username VARCHAR(30) NOT NULL,
+    steam_password VARCHAR(100) NOT NULL,
+    time_left INT(100) DEFAULT '100',
+    plan VARCHAR(30) DEFAULT 'free',
+    status VARCHAR(30) DEFAULT 'inactive'
+)
+```
+
+To create beta keys database, use this SQL command:
+```
+CREATE TABLE IF NOT EXISTS beta_keys (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    betakey VARCHAR(30) NOT NULL,
+    generated_on TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE 
+)
+
+CREATE TABLE IF NOT EXISTS beta_keys_used (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    betakey VARCHAR(30) NOT NULL,
+    used_by VARCHAR(30) NOT NULL,
+    used_on VARCHAR(30) NOT NULL
+)
+```
+
+
 When you register to website, the password will be encrypted, and also the steam accounts will be encrypted too.
 
 ### Note
