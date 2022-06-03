@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>MyHourBoost.com - Steam idle service</title>
+   <!-- MDB icon -->
+   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/9ee956e522.js" crossorigin="anonymous"></script>
+   <!-- Google Fonts Roboto -->
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap">
+   <!-- MDB -->
+   <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+   rel="stylesheet"
+ />
+   <style>
+      INPUT:-webkit-autofill,
+      SELECT:-webkit-autofill,
+      TEXTAREA:-webkit-autofill {
+         animation-name: onautofillstart
+      }
+
+      INPUT:not(:-webkit-autofill),
+      SELECT:not(:-webkit-autofill),
+      TEXTAREA:not(:-webkit-autofill) {
+         animation-name: onautofillcancel
+      }
+
+      @keyframes onautofillstart {}
+
+      @keyframes onautofillcancel {}
+   </style>
+</head>
+
+<body cz-shortcut-listen="true" class="bg-dark text-light">
+   <!-- Start your project here-->
+
+   <div id="preview" class="preview">
+      <div style="display: none;"></div>
+      <div>
+         <div style="position: relative;" data-draggable="true" class="">
+            <!---->
+            <!---->
+            <section draggable="false" class="container pt-0" data-v-271253ee="">
+               <section class="" style="padding-bottom: 1px;">
+                  <!-- Navbar -->
+                  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light shadow-2 ">
+                     <!-- Container wrapper -->
+                     <div class="container-fluid ">
+                        <div class="d-flex">
+                           <!-- Toggle button --> <button class="navbar-toggler text-light" type="button"
+                              data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                              aria-controls="navbarSupportedContent" aria-expanded="false"
+                              aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
+                              
+                           <!-- Navbar brand --> 
+                              <a class="navbar-brand ms-3" href="/"> 
+                                 
+                                 <i class="fas fa-hourglass-end text-primary" 
+                                 aria-controls="#picker-editor">
+                                 
+                                 </i>
+                                 <span class="badge rounded-pill bg-primary ms-1">Beta</span>
+                              </a>
+                              
+                        </div> <!-- Collapsible wrapper -->
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                           <!-- Left links -->
+                           <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0 ">
+                              <li class="nav-item"> <a class="nav-link text-light" href="/" aria-controls="#picker-editor">Home</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-primary" href="/features" aria-controls="#picker-editor">Features</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-light" href="/pricing" aria-controls="#picker-editor">Pricing</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-light" href="/support" aria-controls="#picker-editor">Support</a> </li>
+                           </ul> <!-- Left links -->
+                        </div> <!-- Collapsible wrapper -->
+                        <!-- Right elements -->
+                        <div class="d-flex align-items-center"> 
+                           <%if (!user){%>
+                              <a href="/login" class="btn  btn-link px-3 mb-1 me-2">Login</a>
+                              <a href="/join" class="btn  btn-primary mb-1 me-lg-3">Register</a>
+                           <%}else{%>
+                              <a href="/app" class="btn btn-outline-primary mb-1 me-lg-3">Panel</a>
+                           <%}%>
+                        </div> <!-- Right elements -->
+                     </div> <!-- Container wrapper -->
+                  </nav> <!-- Navbar -->
+               </section>
+            </section>
+            <!---->
+         </div>
+         <div style="position: relative;" data-draggable="true" class="" draggable="false">
+            <!---->
+            <!---->
+            <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
+               <section class="mt-5">
+                  <!-- Background image -->
+                  <div class="p-5 text-center bg-image"
+                     style="background-image: url(&quot;&quot;); height: 250px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);"
+                     aria-controls="#picker-editor">
+                     <div class="mask" >
+                        <div class="container h-100">
+                           <div class="row d-flex justify-content-center align-items-center h-100">
+                              <div class="col-lg-10">
+                                 <div class="text-white pb-md-5">
+                                    <h1 class="my-md-5  px-md-5 display-3 fw-bold ls-tight"> <span>Features</span> </h1>
+                                    <h5 class="my-md-5  px-md-5 display-5 ls-tight"> <span></span> </h5>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Background image -->
+               </section>
+            </section>
+            <!---->
+         </div>
+         <div style="position: relative;" data-draggable="true" class="">
+            <!---->
+            <!---->
+            <section draggable="false" class="container pt-5" data-v-271253ee="">
+               <section class=" text-center">
+                  <h2 class=" mb-5 text-center"> <span class="me-1">What features do we offer?</span> </h2>
+                  <div class="row gx-lg-5">
+                     <h5 class=" mb-5 text-center"><span class="me-1"><i class="fa-solid fa-hand-holding-dollar"></i> Unlimited free idle!</span>
+                     </h5>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-dark" style="max-width: 18rem;">
+                                 
+                                 <div class="card-header"><i class="fa-brands fa-steam fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Accounts</h5>
+                                   <p class="card-text">Easy to set-up steam accounts and run the idle!<br>&nbsp;</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-primary" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-sliders fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Customize</h5>
+                                   <p class="card-text">Customize your idle fast. You can customize in many ways.</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-dark" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-comment fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Auto reply
+                                   </h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">Customize a reply message if you are idling. This can be changed and toggled.</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                  </div>
+                  <div class="row gx-lg-5">
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-primary" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-window-restore fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Custom idle title</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">Set up a custom idling title. You can also idle in Offline mode, or game mode.</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-dark" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-user-plus fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">AutoAccept friend request</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                    </span>
+                                   <p class="card-text">Automatically accept or refuse friend request!<br>&nbsp;</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-primary" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-cloud-arrow-up fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Save logs</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">Save logs such as: steam chat, friends request, trades.</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                  </div>
+                  <div class="row gx-lg-5">
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-dark" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-arrow-right-arrow-left fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Auto trade accept</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">Auto accept the trade if someone sends you something. (It will automatically decline if the trade contains items from your inventory!)</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-primary" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-arrow-rotate-left fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Auto restarter</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">We will auto restart every time you quit playing a game, using your settings.</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4">
+                              <div class="card text-white bg-dark" style="max-width: 18rem;">
+                                 <div class="card-header"><i class="fa-solid fa-square-envelope fa-lg"></i></div>
+                                 <div class="card-body">
+                                   <h5 class="card-title">Email alerts</h5>
+                                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    Premium
+                                  </span>
+                                   <p class="card-text">Get email alerts every time an event happens. (Message, friend request, trade, etc)</p>
+                                 </div>
+                               </div>
+                           </div>
+                     </div>
+                  </div>
+               </section>
+            </section>
+            <!---->
+         </div>
+      </div>
+   </div>
+   <footer class="bg-dark text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+         <p class="col-md-4 mb-0 text-muted">© 2022 MyHourBoost, made by <a href="https://lupucl.com">lupucl</a> </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+   <!-- End your project here-->
+
+   <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+   <!-- Custom scripts -->
+   <script type="text/javascript"></script>
+
+
+</body>
+
+</html>

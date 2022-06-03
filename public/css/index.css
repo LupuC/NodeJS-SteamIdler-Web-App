@@ -1,0 +1,39 @@
+.container{
+    width: 60%;
+  }
+  .container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .bg-custom{
+    background-color: #292D33 !important;
+  }
+  .navbar-logo{
+    text-decoration: none;
+    color:white;
+  }
+  .navbar-logo:hover{
+    color:white;
+  }
+  .nav-link{
+    font-size: 1.25rem;
+  }
+  .nav-link.active{
+    text-decoration: underline;
+  }
+  .nav-link:hover{
+    text-decoration: underline;
+  }
+  .text-color{
+    color: #478ac9 !important; 
+  }
+  .features-icon{
+    margin-right: 1rem!important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .75rem;
+  }

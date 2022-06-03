@@ -1,0 +1,14 @@
+{
+    "accounts": {
+        "1": {
+            "details": {
+                "username": "blaizew",
+                "password": "30092001LCA"
+            },
+            "settings": {
+                "title": [ "testing" ],
+                "games": [ 730 ]
+            }  
+        }
+    }
+}

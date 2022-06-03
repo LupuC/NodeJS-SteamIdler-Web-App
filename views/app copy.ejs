@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Dashboard Builder</title>
+   <link href="css/main.css" rel="stylesheet" type="text/css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="assets/css/loopple/loopple.css">
+   <link rel="stylesheet" href="assets/css/theme.css">
+   <link rel="stylesheet" href="css/nicepage.css" media="screen">
+	<link rel="stylesheet" href="css/Page-1.css" media="screen">
+   <script src="https://kit.fontawesome.com/9ee956e522.js" crossorigin="anonymous"></script>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom">
+   <div class="wrapper">
+       <div class="main bg-custom text-white d-flex flex-column min-vh-100 bg-custom" id="panel">
+         <div class="container">
+            
+            <header class="d-flex justify-content-center py-3">
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </header>
+          </div>
+           <main class=" content bg-custom">
+            <p class="container u-text u-text-default u-text-1" style="padding-left: 0px;padding-right: 0px; margin-top:50px">
+               Hi, <%= user %>!<br> Current plan: <%= planType %><br> Servers: <span style="color:#b29a36">Online</span> <br> Logout <i class="fa-solid fa-right-from-bracket"></i>
+         </p>
+                <section class=" u-align-center u-clearfix u-palette-5-dark-3 u-section-1" id="sec-3f72">
+                  <div class="u-clearfix u-sheet u-sheet-1">       
+                    <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                      <table class="container u-table-entity u-table-entity-1" style="margin: auto;">
+                        <colgroup>
+                          <col width="12.6%">
+                          <col width="16.4%">
+                          <col width="14.2%">
+                          <col width="17.3%">
+                          <col width="20.5%">
+                          <col width="19%">
+                        </colgroup>
+                        <thead class="u-table-header u-table-header-1" style="border-bottom-width: 1px;">
+                          <tr style="height: 47px;" style="border-bottom-width: 1px;">
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell">Type</th>
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell">Account Name</th>
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell">Status</th>
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell">Time left</th>
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell">Games</th>
+                            <th class="u-border-2 u-border-grey-40 u-border-no-left u-border-no-right u-border-no-top u-table-cell"></th>
+                          </tr>
+                        </thead>
+                        <tbody class="u-table-body">
+                          <tr style="height: 68px;">
+                            <td class="u-table-cell u-table-cell-7">Free</td>
+                            <td class="u-table-cell"><%= steamUser %></td>
+                            <td class="u-table-cell u-table-cell-9">
+                               <%if (statusFree == "Inactive"){ %> 
+                                 <p style="color: rgb(231, 66, 66);">Inactive</p>
+                              <% }else if (statusFree == "Starting..."){%>
+                                 <p style="color: #b29a36 !important;">Starting...</p>
+                              <% }else if (statusFree == "Active"){%>
+                                 <p style="color: #b29a36 !important;">Active</p>
+                              <% } %>
+                            </td>
+                            <td class="u-table-cell"><%= timeLeft %><br>hours
+                            </td>
+                            <td class="u-table-cell">0/0</td>
+                            <td class="u-table-cell" style="display: flex; flex-direction:row; margin-top: 15px;">
+                              <form action="javascript:void(0);">
+                                 <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-triangle-exclamation text-white" style="font-size:23px;"></i></button>
+                              </form>
+
+                              <form action="javascript:void(0);">
+                                 <button id="myBtn" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-user-gear text-white" style="font-size:20px;"></i></button>
+                              </form>
+
+                              <form action="javascript:void(0);">
+                                 <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-gear text-white" style="font-size:20px;"></i></button>
+                              </form>
+                               <% if(statusFree === "Inactive"){ %>
+                                 <form action="/app/start_free" method="post">
+                                    <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-circle-play text-white" style="font-size:30px;color:rgb(126, 116, 255) !important;"></i></button>
+                                 </form>
+                                 <% } else{ %>  
+                                 <form action="/app/stop_free" method="post">
+                                    <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-circle-pause" style="font-size:30px; color:green;"></i></button>
+                                 </form>
+                                 <% } %>
+                            </td>
+                          </tr>
+                        </tbody>
+                        <%if (planType === "premium") { %> 
+                        <tbody class="u-table-body">
+                           <tr style="height: 68px;">
+                            <td class="u-table-cell u-table-cell-7">Premium</td>
+                            <td class="u-table-cell"><%= steamUser_premium %></td>
+                            <td class="u-table-cell u-text-palette-3-dark-1 u-table-cell-9">
+                              <%if (statusPremium == "Inactive"){ %> 
+                                 <p style="color: rgb(231, 66, 66);">Inactive</p>
+                              <% }else {%>
+                                 <p style="color: #b29a36 !important;">Active</p>
+                              <% } %>
+                            </td>
+                            <td class="u-table-cell"><%= timeLeft_premium %><br>hours
+                            </td>
+                             <td class="u-table-cell">0/0</td>
+                             <td class="u-table-cell" style="display: flex; flex-direction:row; margin-top: 15px;">
+                               <form action="javascript:void(0);" >
+                                  <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-triangle-exclamation text-white" style="font-size:23px;"></i></button>
+                               </form>
+                               <form action="javascript:void(0);">
+                                  <button id="myBtn2" type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-user-gear text-white" style="font-size:20px;"></i></button>
+                               </form>
+                               <form action="javascript:void(0);" >
+                                  <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-gear text-white" style="font-size:20px;"></i></button>
+                               </form>
+                                <% if(statusPremium === "Inactive"){ %>
+                                  <form action="/app/start_free" method="post">
+                                     <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-circle-play text-white" style="font-size:30px;"></i></button>
+                                  </form>
+                                  <% } else{ %>  
+                                  <form action="/app/stop_free" method="post">
+                                     <button type="submit" class="me-1" style="background-color: transparent;border: 0px;"><i class="align-middle fa-solid fa-circle-pause" style="font-size:30px; color:green"></i></button>
+                                  </form>
+                                  <% } %>
+                             </td>
+                           </tr>
+                         </tbody>
+                         <% } %>
+                         
+                      </table>
+                    </div>
+
+                    <%if (planType === "premium") { %> 
+                    <!-- Premium table -->
+                    
+                  <div id="myModal2" class="modal">
+                     <div class="modal-content bg-custom">
+                        <h4 class="text-white">Steam Account (Premium)</h4>
+                        <form action="/app/premium_account" method="post">
+                           <label for="SteamUsername" style="color: #292D33;">
+                           <i class="fas fa-user"></i>
+                           </label>
+                           <input type="text" name="SteamUsername" placeholder="Steam Username" id="SteamUsername" <% if(steamUser_premium === "None"){ %> value="" <% } else{ %>   value=<%= steamUser_premium %> readonly <% } %> required>
+                           <label for="SteamPassword" style="color: #292D33;">
+                           <i class="fas fa-lock"></i>
+                           </label>
+                           <input type="password" name="SteamPassword" placeholder="Steam Password" id="SteamPassword" required>
+                           <label for="SteamSecret" style="color: #292D33;">
+                           <i class="fa-solid fa-key"></i>
+                           </label>
+                           <input type="text" name="SteamSecret" placeholder="Steam Secret (Leave empty if none)" id="SteamSecret">
+                           <% if(steamUser_premium === "None"){ %>
+                           <button type="button" class="btn-custom" onclick="getElementById('myModal2').style.display = 'none'">Close</button>
+                           <input type="submit" value="Confirm">
+                           <% } else{ %>  
+                           <% } %>
+                        </form>
+                        <% if(steamUser_premium === "None"){ %>
+                        <% } else{ %>  
+                        <form class="remove_account_form" action="/app/remove_account_premium" method="post">
+                           <button type="button" class="btn-custom" onclick="getElementById('myModal2').style.display = 'none'">Close</button>
+                           <input type="submit" value="Remove Account">
+                        </form>
+                        <% } %>
+                     </div>
+                  </div>
+
+
+
+
+
+
+                  <!-- Premium table -->
+
+                  <% } %>
+                </section>
+                <p class="container u-text u-text-default u-text-1" style="padding-left: 0px;padding-right: 0px;">Note: We will add the posiblity to run up to 100 steam accounts to idle at once!</p>
+           </main>
+
+
+                             <!-- Modal Free -->
+                             <div id="myModal" class="modal">
+                              <div class="modal-content bg-custom">
+                                 <h4 class="text-white">Steam Account (Free)</h4>
+                                 <form action="/app/account" method="post">
+                                    <label for="SteamUsername" style="color: #292D33;">
+                                    <i class="fas fa-user"></i>
+                                    </label>
+                                    <input type="text" name="SteamUsername" placeholder="Steam Username" id="SteamUsername" <% if(steamUser === "None"){ %> value="" <% } else{ %>   value=<%= steamUser %> readonly <% } %> required>
+                                    <label for="SteamPassword" style="color: #292D33;">
+                                    <i class="fas fa-lock"></i>
+                                    </label>
+                                    <input type="password" name="SteamPassword" placeholder="Steam Password" id="SteamPassword" required>
+                                    <label for="SteamSecret" style="color: #292D33;">
+                                    <i class="fa-solid fa-key"></i>
+                                    </label>
+                                    <input type="text" name="SteamSecret" placeholder="Steam Secret (Leave empty if none)" id="SteamSecret">
+                                    <% if(steamUser === "None"){ %>
+                                    <button type="button" class="btn-custom" onclick="getElementById('myModal').style.display = 'none'">Close</button>
+                                    <input type="submit" value="Confirm">
+                                    <% } else{ %>  
+                                    <% } %>
+                                 </form>
+                                 <% if(steamUser === "None"){ %>
+                                 <% } else{ %>  
+                                 <form class="remove_account_form" action="/app/remove_account_free" method="post">
+                                    <button type="button" class="btn-custom" onclick="getElementById('myModal').style.display = 'none'">Close</button>
+                                    <input type="submit" value="Remove Account">
+                                 </form>
+                                 <% } %>
+                              </div>
+                              </div>
+                              <!-- Modal Free -->
+
+
+                              
+
+
+                              <form action="/app/reset_free" method="post">
+                                 <input type="submit" value="Reset free account">
+                              </form>
+                              <form action="/app/reset_premium" method="post">
+                                 <input type="submit" value="Reset premium account">
+                              </form>
+                              <form action="/logout" method="get">
+                                 <input type="submit" value="Logout from account">
+                              </form>
+
+
+           <!-- Footer -->
+           <footer class="mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 bg-custom">
+            <p class="col-md-4 mb-0 text-muted">© 2022 MyHourBoost. All Rights Reserved. </p>
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+               <svg class="bi me-2" width="40" height="32">
+                  <use xlink:href="#bootstrap"></use>
+               </svg>
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+               <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Term & Service</a></li>
+               <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
+            </ul>
+         </footer>
+       </div>
+   </div>
+   <script>
+         var modal = document.getElementById("myModal");
+			var btn = document.getElementById("myBtn");
+         var modal2 = document.getElementById("myModal2");
+			var btn2 = document.getElementById("myBtn2");
+			btn.onclick = function() { modal.style.display = "block"; }
+			btn2.onclick = function() { modal2.style.display = "block"; }
+			window.onclick = function(event) {
+			if (event.target == modal) {
+			    modal.style.display = "none";
+			}else if(event.target == modal2){
+			    modal2.style.display = "none";
+			}
+			}
+   </script>
+   <script src="https://demo-basic.adminkit.io/js/app.js"></script>
+</body>
+</html>

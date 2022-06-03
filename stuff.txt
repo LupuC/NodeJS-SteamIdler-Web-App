@@ -1,0 +1,75 @@
+user_id username password email plan hours_left
+
+user_id: #00001
+username: username
+password: password
+email: email
+plan: free (default)
+hours_left: 100 (default)
+
+
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+
+CREATE TABLE IF NOT EXISTS steam_accounts_free (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    steam_username VARCHAR(30) NOT NULL,
+    steam_password VARCHAR(100) NOT NULL,
+    time_left INT(100) DEFAULT '100',
+    plan VARCHAR(30) DEFAULT 'free',
+    status VARCHAR(30) DEFAULT 'inactive'
+)
+
+
+ALTER TABLE steam_accounts AUTO_INCREMENT = 1
+
+
+set @autoid :=0; 
+update employee set id = @autoid := (@autoid+1);
+alter table employee Auto_Increment = 1;
+
+
+ 
+CREATE EVENT update_random
+    ON SCHEDULE EVERY 1 HOUR
+    COMMENT 'Updates Random Table with Student from Student Table every hour'
+    DO 
+    BEGIN
+     UPDATE TABLE random SET student = (SELECT student FROM student ORDER BY RAND() LIMIT 1);
+    END
+
+
+
+CODE - xxx-xxx-xxxxx
+CREATED_ON - date
+TYPE - Small/ Big/ Plus/ Premium
+HOURS - 700/ 1400/ 2400/ 6500
+USED - YES/NO
+USED_BY - NONE
+ 
+
+
+
+
+
+
+
+
+
+
+What you're looking for is called "account verification" or "email verification". There are plenty of Node modules that can perform this, but the principle goes like this:
+
+Your User model should have an active attribute that is false by default
+When the user submits a valid signup form, create a new User (who's active will be false initially)
+Create a long random string (128 characters is usually good) with a crypto library and store it in your database with a reference to the User ID
+Send an email to the supplied email address with the hash as part of a link pointing back to a route on your server
+When a user clicks the link and hits your route, check for the hash passed in the URL
+If the hash exists in the database, get the related user and set their active property to true
+Delete the hash from the database, it is no longer needed
+Your user is now verified.

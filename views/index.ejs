@@ -1,0 +1,185 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>MyHourBoost.com - Steam idle service</title>
+   <!-- MDB icon -->
+   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+   <!-- Google Fonts Roboto -->
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap">
+   <!-- MDB -->
+   <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+   rel="stylesheet"
+ />
+   <style>
+      INPUT:-webkit-autofill,
+      SELECT:-webkit-autofill,
+      TEXTAREA:-webkit-autofill {
+         animation-name: onautofillstart
+      }
+
+      INPUT:not(:-webkit-autofill),
+      SELECT:not(:-webkit-autofill),
+      TEXTAREA:not(:-webkit-autofill) {
+         animation-name: onautofillcancel
+      }
+
+      @keyframes onautofillstart {}
+
+      @keyframes onautofillcancel {}
+   </style>
+</head>
+
+<body cz-shortcut-listen="true" class="bg-dark text-light">
+   <!-- Start your project here-->
+
+   <div id="preview" class="preview">
+      <div style="display: none;"></div>
+      <div>
+         <div style="position: relative;" data-draggable="true" class="">
+            <!---->
+            <!---->
+            <section draggable="false" class="container pt-0" data-v-271253ee="">
+               <section class="" style="padding-bottom: 1px;">
+                  <!-- Navbar -->
+                  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light shadow-2 ">
+                     <!-- Container wrapper -->
+                     <div class="container-fluid ">
+                        <div class="d-flex">
+                           <!-- Toggle button --> <button class="navbar-toggler text-light" type="button"
+                              data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                              aria-controls="navbarSupportedContent" aria-expanded="false"
+                              aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
+                              
+                           <!-- Navbar brand --> 
+                              <a class="navbar-brand ms-3" href="/"> 
+                                 
+                                 <i class="fas fa-hourglass-end text-primary" 
+                                 aria-controls="#picker-editor">
+                                 
+                                 </i>
+                                 <span class="badge rounded-pill bg-primary ms-1">Beta</span>
+                              </a>
+                              
+                        </div> <!-- Collapsible wrapper -->
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                           <!-- Left links -->
+                           <ul class="navbar-nav me-auto mb-2 ms-2 ps-1 ms-lg-0 ps-lg-0 mb-lg-0 ">
+                              <li class="nav-item"> <a class="nav-link text-primary" href="/" aria-controls="#picker-editor">Home</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-light" href="/features" aria-controls="#picker-editor">Features</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-light" href="/pricing" aria-controls="#picker-editor">Pricing</a> </li>
+                              <li class="nav-item"> <a class="nav-link text-light" href="/support" aria-controls="#picker-editor">Support</a> </li>
+                           </ul> <!-- Left links -->
+                        </div> <!-- Collapsible wrapper -->
+                        <!-- Right elements -->
+                        <div class="d-flex align-items-center"> 
+                           <%if (!user){%>
+                              <a href="/login" class="btn  btn-link px-3 mb-1 me-2">Login</a>
+                              <a href="/join" class="btn  btn-primary mb-1 me-lg-3">Register</a>
+                           <%}else{%>
+                              <a href="/app" class="btn btn-outline-primary mb-1 me-lg-3">Panel</a>
+                           <%}%>
+                        </div> <!-- Right elements -->
+                     </div> <!-- Container wrapper -->
+                  </nav> <!-- Navbar -->
+               </section>
+            </section>
+            <!---->
+         </div>
+         <div style="position: relative;" data-draggable="true" class="" draggable="false">
+            <!---->
+            <!---->
+            <section draggable="false" class="overflow-hidden pt-0" data-v-271253ee="">
+               <section class="mb-10">
+                  <!-- Background image -->
+                  <div class="p-5 text-center bg-image"
+                     style="background-image: url(&quot;https://i.imgur.com/rUhFG8D.png&quot;); height: 500px; background-size: cover; background-position: 50% 50%; background-color: rgba(0, 0, 0, 0);"
+                     aria-controls="#picker-editor">
+                     <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
+                        <div class="container h-100">
+                           <div class="row d-flex justify-content-center align-items-center h-100">
+                              <div class="col-lg-10">
+                                 <div class="text-white pb-md-5">
+                                    <h1 class="my-md-5  px-md-5 display-3 fw-bold ls-tight"> <span>Boost your hours on Steam</span> </h1>
+                                       <h5><span class="">Cheap, fast & safre boosting service.
+                                          Easy to set-up, easier to run! </span> </h5>
+                                    <a class="btn   btn-outline-light btn-lg py-3 px-5 me-2" href="/beta" role="button"
+                                       aria-controls="#picker-editor" draggable="false">Free 1 month of idling with BETA program.</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div> <!-- Background image -->
+               </section>
+            </section>
+            <!---->
+         </div>
+         <div style="position: relative;" data-draggable="true" class="">
+            <!---->
+            <!---->
+            <section draggable="false" class="container pt-5" data-v-271253ee="">
+               <section class="mb-10 text-center">
+                  <h2 class="fw-bold mb-5 text-center"> <span class="me-1">Why is it so</span><u
+                        class="text-primary">great?</u> </h2>
+                  <div class="row gx-lg-5">
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4"> <i
+                              class="fas fa-sliders-h fa-lg text-white fa-fw" aria-controls="#picker-editor"></i> </div>
+                        <h5 class="fw-bold mb-3">Customize<br></h5>
+                        <p class="text-muted mb-0">We fully support things such as: 2FA, Multiple games idling,
+                           Automatization (Reply, Accept Friend Request etc) + more!</p>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4"> <i
+                              class="fas fa-hand-holding-usd fa-lg text-white fa-fw" aria-controls="#picker-editor"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Free idling<br></h5>
+                        <p class="text-muted mb-0">We're offering Free plan, where you can earn up to ~700 hours per
+                           month of idling by watching ads. Sounds good?</p>
+                           <br>
+                           <a class="btn btn-primary" href="/join" role="button" aria-controls="#picker-editor" draggable="false">Try now!</a>
+                     </div>
+                     <div class="col-md-4 mb-5 mb-md-0">
+                        <div class="p-3 bg-primary rounded-4 shadow-2-strong d-inline-block mb-4"> <i
+                              class="fas fa-cloud fa-lg text-white fa-fw" aria-controls="#picker-editor"></i> </div>
+                        <h5 class="fw-bold mb-3">Run in cloud<br></h5>
+                        <p class="text-muted mb-0">There's nothing to download, since your idles run on our website.
+                           Easy &amp; fast to setup.</p>
+                     </div>
+                  </div>
+                  <a class="btn btn-outline-primary mt-5 w-25" href="/features" role="button" aria-controls="#picker-editor" draggable="false">See all features</a>
+               </section>
+            </section>
+            <!---->
+         </div>
+      </div>
+   </div>
+   <footer class="bg-dark text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3">
+         <p class="col-md-4 mb-0 text-muted">© 2022 MyHourBoost, made by <a href="https://lupucl.com">lupucl</a> </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+   <!-- End your project here-->
+
+   <!-- MDB -->
+<script
+type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+   <!-- Custom scripts -->
+   <script type="text/javascript"></script>
+
+
+</body>
+
+</html>
