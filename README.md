@@ -50,11 +50,22 @@ app.js (main app function)
 ```
 
 # Showcase
+Main Page
 ![Main Page](showcase/1.png)
+
+Features page
 ![Features Page](showcase/2.png)
+
+Pricing Page
 ![Pricing Page](showcase/3.png)
+
+Free user Page
 ![Free user Page](showcase/4.png)
+
+Premium user Page
 ![Premium user Page](showcase/5.png)
+
+Database
 ![Database](showcase/Screenshot_1.png)
 
 
