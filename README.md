@@ -105,7 +105,7 @@ The functions that I made, are
 
 
 ### Note
-You'll have to manually set the plan type to free/ premium or admin, to see the app page.
+In order to see the app page, you need a free or premium plan to account.
 
 Free plan > access to 1 steam account
 
@@ -121,6 +121,8 @@ Admin plan > Acces to a admin panel, where you can see users, and generate beta 
 5. Create a complex control panel for admins [ ]
 6. Add settings page to users (change pw, emails etc) [ ]
 7. Add steam settings - Title, Auto responder etc [ ]
+
+Free accounts will be limited to 100 hours to idle, renewable every time when expires.
 # Roadmap
 ```
 app.js (main app function)
