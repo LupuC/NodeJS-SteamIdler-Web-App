@@ -139,7 +139,7 @@ app.js (main app function)
 ```
 
 # Showcase
-You can find an video [here](https://www.youtube.com/watch?v=sDBT-DZDIy4)
+You can find a video [here](https://www.youtube.com/watch?v=sDBT-DZDIy4)
 
 
 
